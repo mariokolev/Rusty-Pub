@@ -461,6 +461,21 @@
     #center-logo{
         left:45%;
     }
+
+    .grid{
+        width:100%;
+        border-radius:0px;
+    }
+
+    .grid .picture-event{
+        border-radius:0px;;
+    }
+
+    .text-event p{
+        width:70% !important;
+        text-align:center;
+        font-weight: 300 !important;
+    }
 }
 
 @media screen and (max-height: 700px){
