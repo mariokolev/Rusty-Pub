@@ -488,6 +488,7 @@ footer .facebook-icon{
     background-size: cover;
     width:13px;
     height:26px;
+    display:block;
 }
 
 footer .instagram-icon{
@@ -495,6 +496,7 @@ footer .instagram-icon{
     background-size: cover;
     width:26.44px;
     height:26.44px;
+    display:block;
    
 }
 
@@ -503,6 +505,7 @@ footer .twitter-icon{
     background-size: cover;
     width:32px;
     height:26px;
+    display:block;
 }
 
 footer #copyright-text{
