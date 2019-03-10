@@ -5,13 +5,14 @@ html{
     box-sizing: border-box;
     margin:0;
     padding:0;
-    
+    overflow-x:hidden;
 }
 
 *{
     box-sizing: inherit;
     margin:0;
     padding:0;
+    
 }
 
 body{
@@ -21,8 +22,13 @@ body{
     overflow-x: hidden !important;
     word-wrap: break-word;
     position:relative;
+  
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
     
 }
+
 a{
     text-decoration: none;
 }
