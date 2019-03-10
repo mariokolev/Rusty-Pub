@@ -402,6 +402,8 @@
     #section-events{
         padding-bottom:10px;
     }
+
+   
     .grid{
         margin:0px auto 76px auto ;
         display:grid;
@@ -443,6 +445,9 @@
     .grid .text-event p{
         margin-top:50px !important;
         max-width:300px !important;
+        width:70% !important;
+        text-align:center;
+        font-weight: 300 !important;
     }
 
 
@@ -490,11 +495,7 @@
         border-radius:0px;;
     }
 
-    .text-event p{
-        width:70% !important;
-        text-align:center;
-        font-weight: 300 !important;
-    }
+    
 }
 
 @media screen and (max-height: 700px){
