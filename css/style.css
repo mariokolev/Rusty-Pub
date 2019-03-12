@@ -195,6 +195,14 @@ a{
     background-color: transparent;
   }
 
+  .active{
+    opacity:1!important;
+    transform:translateY(0%)!important;
+    transition-duration: .7s;
+    transition-delay: opacity .1s;
+    transform:scale(1.0);
+  }
+
 /*Design of section-about */
 
 #section-about{
@@ -211,6 +219,8 @@ a{
     
 }
 
+
+
 .behind-bar{
     display:block;
     background: url(../img/behind-bar.png) center center no-repeat;
@@ -218,6 +228,9 @@ a{
     background-size: cover;
     width:100%;
     height:500px;
+    transform:translateY(30%);
+    opacity:0;
+    transition-delay:.5s;
 }
 
 #title-about{
@@ -230,6 +243,8 @@ a{
     display:block;
     text-align: center;
     width:100%;
+    opacity:0;
+    transform :scale(0.2);
 }
 
 #title-p{
@@ -242,6 +257,9 @@ a{
     margin:40px auto 70px auto;
     color:#444444;
     line-height:30px;
+    opacity:0;
+    transform :scale(0.2);
+    transition-delay: scale 1s;
 }
 #text-about{
     display:block;
@@ -258,11 +276,22 @@ a{
     margin-right:20px;
     padding-right:20px;
     box-shadow: 0.8px 0 0px rgba(68,68,68,0.5);/*vertical line*/
-    -ms-box-shadow: 0.8px 0 0px rgba(68,68,68,0.5);;
+    -ms-box-shadow: 0.8px 0 0px rgba(68,68,68,0.5);
+    transform:translateY(30%);
+    opacity:0;
+    
 }
+#text-about li:first-child{
+    transition-delay:.5s;
+}
+.second{
+    transition-delay: .7s;
+}
+
 #text-about li:last-child{
     margin-right:0;
     box-shadow: none;
+    transition-delay:1.3s;
 }
 
 #text-about li a{

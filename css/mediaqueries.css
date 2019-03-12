@@ -3,6 +3,8 @@
     .grid:after{
         margin-left:0px;
     }
+
+    
     #text-about{
         display:block;
         list-style-type: circle;

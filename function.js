@@ -1,9 +1,24 @@
 window.onload = function(){
-
-
-
 var slideIndex = 1;
 showSlides(slideIndex);
+
+
+
+//Reveal on scroll 
+function revealonScroll(target){
+    target = document.querySelector(target);
+    const windowOffSet = window.pageYOffset;
+    const targetOffSet = target.offsetTop;
+    const windowHeight = window.innerHeight;
+    const bottom = windowOffSet + windowHeight;
+
+    if (bottom > targetOffSet){
+        target.classList.add('active');
+    }else{
+        target.classList.remove('active');
+    }
+}
+
 
 
 // Thumbnail image controls
@@ -78,7 +93,16 @@ function showSlides() {
      }
 
 //Adding event listener to window when scrolling
-window.addEventListener("scroll", DotColor);
+//window.addEventListener("scroll", DotColor);
+window.addEventListener("scroll", function(e){
+    DotColor();
+    revealonScroll('.behind-bar');
+    revealonScroll('#title-about');
+    revealonScroll('#title-p');
+    revealonScroll('#text-about li:first-child');
+    revealonScroll('.second');
+    revealonScroll('#text-about li:last-child');
+});
 //const dots = document.getElementsByClassName("dot");
 
 //JQuery for clicking dots
@@ -104,6 +128,7 @@ $('.dots li:nth-child(3)').click(function(e){
     }, 700);
 });
 
+//smooth scroll for nav elements
 const about = document.querySelector(".nav-menu li:first-child");
 const events = document.querySelector('.nav-menu li:nth-child(2)');
 const burger = document.querySelector('#burger-container');
