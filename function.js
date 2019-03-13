@@ -1,4 +1,24 @@
 window.onload = function(){
+
+        var resizeTimer;
+        window.addEventListener('resize', function() {
+            document.body.classList.add('is-resizing');
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(function() {
+                document.body.classList.remove('is-resizing');
+            }, 100);
+        });
+
+    $('.loader-bg').fadeOut(800);
+   
+    const logo = document.querySelector('#center-logo');
+    logo.classList.add('active');
+    const landPic = document.querySelector('#landing-pic');
+    landPic.classList.add('active');
+    const navChilds = document.querySelectorAll('.nav-menu li');
+    for(let i = 0; i < navChilds.length; i++){
+        navChilds[i].classList.add('active');
+    }
 var slideIndex = 1;
 showSlides(slideIndex);
 
@@ -102,6 +122,29 @@ window.addEventListener("scroll", function(e){
     revealonScroll('#text-about li:first-child');
     revealonScroll('.second');
     revealonScroll('#text-about li:last-child');
+    revealonScroll('#title-events');
+    revealonScroll('.grid-fever-night');
+    revealonScroll('.grid-beer');
+    revealonScroll('.grid-karaoke');
+
+
+    const karaoke = document.querySelector('.grid-karaoke');
+    const x = window.matchMedia("(min-width:1080px)");
+    if(x.matches){
+    karaoke.addEventListener('transitionend', function(){
+            revealonScroll('.grid-karaoke .text-event');
+            revealonScroll('.grid-fever-night .text-event');
+            revealonScroll('.grid-beer .text-event');
+       
+        
+    });
+}else{
+            revealonScroll('.grid-karaoke .text-event');
+            revealonScroll('.grid-fever-night .text-event');
+            revealonScroll('.grid-beer .text-event');
+}
+    
+    
 });
 //const dots = document.getElementsByClassName("dot");
 
