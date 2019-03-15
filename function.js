@@ -1,5 +1,6 @@
-window.onload = function(){
-
+window.addEventListener("load", function(){
+    $('.loader-bg').fadeOut(800);
+//stop all transition when resizing window
         var resizeTimer;
         window.addEventListener('resize', function() {
             document.body.classList.add('is-resizing');
@@ -9,7 +10,7 @@ window.onload = function(){
             }, 100);
         });
 
-    $('.loader-bg').fadeOut(800);
+    
    
     const logo = document.querySelector('#center-logo');
     logo.classList.add('active');
@@ -236,7 +237,7 @@ burger.addEventListener("click", function(){
 });
 
 
-};
+});
 
 
 

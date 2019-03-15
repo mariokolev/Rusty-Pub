@@ -426,7 +426,7 @@
 @media screen and (max-width: 700px){
     
     #text-about li{
-        text-align:justify !important;
+        text-align:left !important;
     }
 
     #section-about{
