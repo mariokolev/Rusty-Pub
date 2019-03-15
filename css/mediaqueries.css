@@ -412,7 +412,9 @@
 /*-------------- END SECTION ABOUT ---------------- */
 
     /*---------- Section EVENTS ---------------- */
-
+#section-events{
+    margin-top:0px;
+}
     #title-events{
         font-size: 33px;
     }
