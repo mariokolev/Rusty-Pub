@@ -63,7 +63,7 @@
         height:50vh !important;
     }
 #center-logo{
-    transition:scale(1.0);
+    transition:none ! important;
     }
     .grid{
         margin:0px auto 76px auto !important;
