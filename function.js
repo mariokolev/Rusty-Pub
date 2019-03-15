@@ -25,11 +25,14 @@ window.onload = function(){
             titleAbout.classList.add('active');
             const titleP = document.querySelector('#title-p');
             titleP.classList.add('active');
+            const titlePsecond = document.querySelector(' #title-p-second');
+            titlePsecond.classList.add('active');
 
     }else{
         window.addEventListener('scroll', function(e){
             revealonScroll('#title-about');
             revealonScroll('#title-p');
+            revealonScroll(' #title-p-second');
         });
     }
 

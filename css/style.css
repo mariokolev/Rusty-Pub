@@ -280,6 +280,10 @@ a{
     transform :scale(0.2);
     transition-delay: scale 1s;
 }
+
+#title-p-second{
+    display:none;
+}
 #text-about{
     display:block;
     list-style-type: circle;
