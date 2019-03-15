@@ -19,6 +19,20 @@ window.onload = function(){
     for(let i = 0; i < navChilds.length; i++){
         navChilds[i].classList.add('active');
     }
+    const x = window.matchMedia("(max-width:1080px)");
+    if(x.matches){
+            const titleAbout = document.querySelector('#title-about');
+            titleAbout.classList.add('active');
+            const titleP = document.querySelector('#title-p');
+            titleP.classList.add('active');
+
+    }else{
+        window.addEventListener('scroll', function(e){
+            revealonScroll('#title-about');
+            revealonScroll('#title-p');
+        });
+    }
+
 var slideIndex = 1;
 showSlides(slideIndex);
 
@@ -117,8 +131,6 @@ function showSlides() {
 window.addEventListener("scroll", function(e){
     DotColor();
     revealonScroll('.behind-bar');
-    revealonScroll('#title-about');
-    revealonScroll('#title-p');
     revealonScroll('#text-about li:first-child');
     revealonScroll('.second');
     revealonScroll('#text-about li:last-child');
