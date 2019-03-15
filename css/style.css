@@ -255,7 +255,7 @@ a{
 #title-about{
     
     color:#444444;
-    font-size:57px;
+    font-size:45px;
     font-family: Chalisa Oktavia;
     margin:32px auto 0px auto;
     top:0;
@@ -320,7 +320,7 @@ a{
 #text-about li a{
     color:#444444;
     font-size:16px;
-    font-family:sans-serif;
+    font-family:Trebuchet MS;
     line-height:1.5;
     text-align:left;
     width:90%;
@@ -333,7 +333,7 @@ a{
     width:100%;
     /*background-color:#F3F3F3;*/
     background:#fff;
-    margin-top:111px;
+   /* margin-top:111px;*/
     padding-top:69px;
     padding-bottom:70px;
     text-align: center;
