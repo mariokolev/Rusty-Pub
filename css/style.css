@@ -64,6 +64,7 @@ a{
     position:relative;
    /* transform:scale(2.0);*/
    transform:translateY(10%);
+    opacity:0;
     transition-duration:0.7s;
    
 }
@@ -125,14 +126,13 @@ a{
     background-size:cover;
     width:330px;
     height:250px;
-    position:absolute;
+    position:relative;
     left:50%;
     top:20%;
     margin-left:-145px;
     z-index:10;
     transition-duration: .8s;
     transition-delay: .3s;
-    transform:scale(0.5);
     opacity:0;
 }
 
