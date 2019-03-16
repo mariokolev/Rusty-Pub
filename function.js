@@ -1,5 +1,22 @@
+//scroll to position-y 0 when the page is being refreshed
+window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+  }
+
+  //function for checking for added class
+  function isAdded(yourElement, yourClass){
+    const x = document.querySelector(yourElement)
+    if(x.classList.contains(yourClass)){
+        x.classList.remove(yourClass);
+    }else{
+        x.classList.add(yourClass);
+    }
+}
+
 window.addEventListener("load", function(){
     $('.loader-bg').fadeOut(800);
+    
+
 //stop all transition when resizing window
         var resizeTimer;
         window.addEventListener('resize', function() {
@@ -10,24 +27,17 @@ window.addEventListener("load", function(){
             }, 100);
         });
 
-    
-   
-    const logo = document.querySelector('#center-logo');
-    logo.classList.add('active');
-    const landPic = document.querySelector('#landing-pic');
-    landPic.classList.add('active');
-    const navChilds = document.querySelectorAll('.nav-menu li');
-    for(let i = 0; i < navChilds.length; i++){
-        navChilds[i].classList.add('active');
-    }
+    isAdded('#center-logo', 'active');
+    isAdded('#landing-pic', 'active');
+    isAdded('.nav-menu li:first-child', 'active');
+    isAdded('.nav-menu li:nth-child(2)', 'active');
+    isAdded('.nav-menu li:nth-child(3)', 'active');
+  
     const x = window.matchMedia("(max-width:1080px)");
     if(x.matches){
-            const titleAbout = document.querySelector('#title-about');
-            titleAbout.classList.add('active');
-            const titleP = document.querySelector('#title-p');
-            titleP.classList.add('active');
-            const titlePsecond = document.querySelector(' #title-p-second');
-            titlePsecond.classList.add('active');
+            isAdded('#title-about', 'active');
+            isAdded('#title-p', 'active');
+            isAdded('#title-p-second', 'active');
 
     }else{
         window.addEventListener('scroll', function(e){
@@ -51,13 +61,11 @@ function revealonScroll(target){
     const bottom = windowOffSet + windowHeight;
 
     if (bottom > targetOffSet){
-        target.classList.add('active');
+            target.classList.add('active');
     }else{
         target.classList.remove('active');
     }
 }
-
-
 
 // Thumbnail image controls
 function currentSlide(n) {
@@ -151,8 +159,6 @@ window.addEventListener("scroll", function(e){
             revealonScroll('.grid-karaoke .text-event');
             revealonScroll('.grid-fever-night .text-event');
             revealonScroll('.grid-beer .text-event');
-       
-        
     });
 }else{
             revealonScroll('.grid-karaoke .text-event');
@@ -162,7 +168,7 @@ window.addEventListener("scroll", function(e){
     
     
 });
-//const dots = document.getElementsByClassName("dot");
+
 
 //JQuery for clicking dots
 $('.dots li:first-child').click(function(e){
@@ -225,7 +231,6 @@ burger.addEventListener("click", function(){
     if(!burger.classList.contains('open')){
         navBar.style.display = 'block';
        navBar.classList.add('show-nav');
-    
         burger.classList.add('open');
         burger.style.position = 'fixed';
     }else{
