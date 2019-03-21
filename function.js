@@ -13,9 +13,17 @@ window.onbeforeunload = function () {
     }
 }
 
+//loader
+$(function(){
+    setTimeout(function(){
+  $('.loader-bg').fadeOut('slow', function(){
+    $(this).remove();
+});
+    }, 1000);
+  });
+
+
 window.addEventListener("load", function(){
-    $('.loader-bg').fadeOut(800);
-    
 
 //stop all transition when resizing window
         var resizeTimer;
