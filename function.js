@@ -22,7 +22,6 @@ $(function(){
     }, 1000);
   });
 
-
 window.addEventListener("load", function(){
 
 //stop all transition when resizing window
